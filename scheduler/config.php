@@ -30,8 +30,8 @@ class Config {
     // GENERAL SETTINGS
     // ------------------------------------------------------------------------
 
-    const BASE_URL      = 'http://url-to-easyappointments-directory';
-    const LANGUAGE      = 'english';
+    const BASE_URL      = 'https://calendar-ucanchange-com-br.umbler.net/scheduler';
+    const LANGUAGE      = 'portuguese-br';
     const DEBUG_MODE    = FALSE;
 
     // ------------------------------------------------------------------------
