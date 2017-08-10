@@ -66,12 +66,12 @@ root {
 }
 
 #header #header-menu .menu-item:hover:not(.active) {
-    background-color: #2A8F57;
+    background-color: #FF5F49;
 }
 
 #header #header-menu .active {
     color: #C5FFD6;
-    background: #29A067;
+    background: #FF5A4c;
 }
 
 #footer {
