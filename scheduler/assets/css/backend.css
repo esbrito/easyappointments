@@ -20,7 +20,7 @@ root {
 /* BACKEND GENERAL ELEMENTS
    -------------------------------------------------------------------- */
 #header {
-    background-color: #39c678;
+    background-color: #F36C37;
     border-bottom: 4px solid #c0f1d6;
     box-shadow: none;
     border-radius: 0;
@@ -142,7 +142,7 @@ body .modal .modal-title {
 
 body .modal-header {
     padding: 12px 15px;
-    background: #39c678;
+    background: #F36C37;
     border-bottom: 4px solid #c0f1d6;
 }
 
@@ -236,7 +236,7 @@ body legend {
 
 .backend-page .filter-records .results .entry.selected {
     background-color: #F4F4F4;
-    border-right: 5px solid #39c678;
+    border-right: 5px solid #F36C37;
 }
 
 .backend-page .filter-records .results hr {
@@ -622,7 +622,7 @@ body .form-horizontal .controls {
 
 #users-page #providers .switch-view .current {
     color: #FFF;
-    background: #39c678;
+    background: #F36C37;
 }
 
 #users-page #providers .details-view,
