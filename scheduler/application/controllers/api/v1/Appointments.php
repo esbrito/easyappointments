@@ -45,9 +45,12 @@ class Appointments extends API_V1_Controller {
      * 
      * @param int $id Optional (null), the record ID to be returned.
      */
-    public function get($id = null, $customerId = null) {
+    public function get($id = null) {
         try {
-            if($customerId == null) {
+
+            $customerId = new UnsignedInteger($this->input->get('customerId'));
+
+            if($customerId == null || $customerId == 0) {
                 $condition = $id !== null ? 'id = ' . $id : null;
             }else{
                 $condition = $customerId !== null ? 'customerId = ' . $customerId : null;
