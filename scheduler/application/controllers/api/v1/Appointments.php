@@ -45,9 +45,13 @@ class Appointments extends API_V1_Controller {
      * 
      * @param int $id Optional (null), the record ID to be returned.
      */
-    public function get($id = null) {
+    public function get($id = null, $customerId = null) {
         try {
-            $condition = $id !== null ? 'id = ' . $id : null;
+            if($customerId == null) {
+                $condition = $id !== null ? 'id = ' . $id : null;
+            }else{
+                $condition = $customerId !== null ? 'customerId = ' . $customerId : null;
+            }
             $appointments = $this->appointments_model->get_batch($condition); 
 
             if ($id !== null && count($appointments) === 0) {
