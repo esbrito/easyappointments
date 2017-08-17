@@ -16,6 +16,7 @@ require_once __DIR__ . '/API_V1_Controller.php';
 use \EA\Engine\Api\V1\Response;
 use \EA\Engine\Api\V1\Request;
 use \EA\Engine\Types\NonEmptyText;
+use \EA\Engine\Types\UnsignedInteger;
 
 /**
  * Appointments Controller
