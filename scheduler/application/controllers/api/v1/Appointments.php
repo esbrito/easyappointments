@@ -49,12 +49,12 @@ class Appointments extends API_V1_Controller {
     public function get($id = null) {
         try {
 
-            $customerId = new UnsignedInteger($this->input->get('customerId'));
+            $customerId = $this->input->get('customerId');
 
-            if($customerId == null || $customerId == 0) {
+            if($customerId == null) {
                 $condition = $id !== null ? 'id = ' . $id : null;
             }else{
-                $condition = $customerId !== null ? 'customerId = ' . $customerId : null;
+                $condition = $customerId !== null ? 'id_users_customer = ' . $customerId : null;
             }
             $appointments = $this->appointments_model->get_batch($condition); 
 
