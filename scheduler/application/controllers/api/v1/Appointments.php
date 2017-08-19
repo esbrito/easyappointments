@@ -50,12 +50,16 @@ class Appointments extends API_V1_Controller {
         try {
 
             $customerId = $this->input->get('customerId');
+            $providerId = $this->input->get('providerId');
 
-            if($customerId == null) {
-                $condition = $id !== null ? 'id = ' . $id : null;
-            }else{
+            if($customerId != null) {
                 $condition = $customerId !== null ? 'id_users_customer = ' . $customerId : null;
+            }else if($providerId != null){
+                $condition = $providerId !== null ? 'id_users_provider = ' . $providerId : null;
+            }else{
+                $condition = $id !== null ? 'id = ' . $id : null;
             }
+           
             $appointments = $this->appointments_model->get_batch($condition); 
 
             if ($id !== null && count($appointments) === 0) {
